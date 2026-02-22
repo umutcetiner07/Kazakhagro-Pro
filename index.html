@@ -1,121 +1,177 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uzman Enerji Yöneticisi | Kazakistan Vizyonu</title>
-    <style>
-        body {
-            background: linear-gradient(135deg, #e0f7fa 0%, #e1bee7 100%);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #262626;
-        }
-        header {
-            background-color: #512da8;
-            color: #fff;
-            padding: 2rem 1rem;
-            text-align: center;
-        }
-        .profile-img {
-            border-radius: 100%;
-            border: 3px solid #fff;
-            width: 140px;
-            height: 140px;
-            object-fit: cover;
-            margin-top: -70px;
-            box-shadow: 0 6px 24px 0 #512da841;
-        }
-        main {
-            max-width: 700px;
-            background: #fff;
-            margin: 2rem auto;
-            border-radius: 20px;
-            box-shadow: 0 4px 20px 0 #512da81a;
-            padding: 2rem 2.5rem 3rem 2.5rem;
-        }
-        h1 {
-            margin-top: 0.5em;
-            margin-bottom: 0.2em;
-            font-size: 2.3em;
-            letter-spacing: 1px;
-        }
-        h2 {
-            margin-top: 2.2em;
-            color: #6a1b9a;
-            margin-bottom: 0.7em;
-        }
-        .highlight {
-            color: #388e3c;
-            font-weight: bold;
-        }
-        .stats {
-            background: #f3e5f5;
-            border-left: 6px solid #512da8;
-            padding: 1rem 1.2rem;
-            margin: 1.5rem 0;
-            border-radius: 10px;
-            font-size: 1.08em;
-        }
-        footer {
-            margin-top: 1.5rem;
-            text-align: center;
-            color: #573449;
-            font-size: 1.05em;
-        }
-        @media (max-width: 600px) {
-            main { padding: 1rem; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="KazakhAgro — платформа для инвестиций в AI-тепличный комплекс на гидропонике. Опыт Антальи, потенциал Казахстана и ИИ.">
+  <meta name="keywords" content="AI теплица, гидропоника Казахстан, агротех инвестиции, Умут Четинер, Kazakhagro, теплица Алматы, ROI сельское хозяйство">
+  <meta name="author" content="Umut Çetiner | kazakhagro.com">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.kazakhagro.com">
+  <link rel="alternate" hreflang="ru" href="https://www.kazakhagro.com">
+  <link rel="alternate" hreflang="en" href="https://www.kazakhagro.com">
+  <link rel="alternate" hreflang="kk" href="https://www.kazakhagro.com">
+  <link rel="alternate" hreflang="x-default" href="https://www.kazakhagro.com">
+  <meta property="og:title" content="KazakhAgro | AI-тепличный комплекс на гидропонике — Инвестиционная платформа">
+  <meta property="og:description" content="Опыт Антальи, потенциал Казахстана и ИИ. Умут Четинер — 10+ лет в Анталье, 50+ га в Казахстане, модель «Нулевая ошибка».">
+  <meta property="og:url" content="https://www.kazakhagro.com">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <title>KazakhAgro | AI-тепличный комплекс на гидропонике — Инвестиционная платформа</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="KazakhAgro Home">KazakhAgro</a>
+      <nav class="nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#value" data-i18n="nav_value">Ценность</a></li>
+          <li><a href="#technology" data-i18n="nav_technology">Технологии</a></li>
+          <li><a href="#pillars" data-i18n="nav_edge">Преимущества</a></li>
+          <li><a href="#leadership" data-i18n="nav_leadership">Руководство</a></li>
+          <li><a href="#contact" data-i18n="nav_contact">Контакты</a></li>
+          <li class="nav-cta-mobile"><a href="#investment-deck" class="btn btn-primary" data-i18n="cta_deck">Получить инвест-дек</a></li>
+        </ul>
+      </nav>
+      <div class="header-lang-cta">
+        <div class="lang-switcher" role="group" aria-label="Выбор языка">
+          <button type="button" class="lang-btn active" data-lang="ru" aria-pressed="true">RU</button>
+          <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+          <button type="button" class="lang-btn" data-lang="kk" aria-pressed="false">KK</button>
+        </div>
+        <div class="header-cta">
+          <a href="#investment-deck" class="btn btn-primary" data-i18n="cta_deck">Получить инвест-дек</a>
+        </div>
+      </div>
+      <button type="button" class="nav-toggle" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
 
-    <header>
-        <img src="https://media.licdn.com/dms/image/D4D03AQEFrz5ZH1NL8g/profile-displayphoto-shrink_800_800/0/1682029056553?e=2147483647&v=beta&t=fakeimageurl" alt="Profil Fotoğrafı" class="profile-img">
-        <h1>Enerji ve Proje Yönetiminde Uzman</h1>
-        <div>Kazakistan Vizyonu ile 50+ Hektar Tecrübe</div>
-    </header>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <p class="hero-tag" data-i18n="hero_tag">AI-тепличный комплекс на гидропонике — Казахстан</p>
+        <h1 class="hero-title" data-i18n="hero_title">Опыт Антальи, потенциал Казахстана и ИИ — в одной платформе</h1>
+        <p class="hero-desc" data-i18n-html="hero_desc">Сочетаем более 10 лет опыта в экосистеме Антальи с подтверждённой практикой управления 50+ га в Казахстане и уникальной моделью управления <strong>«Нулевая ошибка»</strong> для рентабельной модернизации тепличных активов.</p>
+        <div class="hero-cta">
+          <a href="#investment-deck" class="btn btn-primary" data-i18n="cta_deck">Получить инвест-дек</a>
+          <a href="#technical-briefing" class="btn btn-secondary" data-i18n="cta_briefing">Записать технический брифинг</a>
+        </div>
+      </div>
+    </section>
 
-    <main>
-        <section>
-            <h2>Hakkımda</h2>
-            <p>
-                50+ hektarlık endüstriyel ve ticari sahalarda enerji verimliliği ve sürdürülebilirlik projelerinde liderlik ettim.<br>
-                Geliştirdiğim çözümlerle <span class="highlight">%15 enerji tasarrufu</span> sağladım. Hem Avrupa normlarında hem de Kazakistan’ın büyüyen enerji piyasasında,
-                ekonomik ve çevreci sonuçlara odaklandım.
-            </p>
-        </section>
+    <section id="value" class="section value-section">
+      <div class="container">
+        <h2 class="section-title" data-i18n="value_title">Ценностное предложение</h2>
+        <p class="value-statement" data-i18n="value_statement">Сельскохозяйственный опыт Антальи, потенциал Казахстана и искусственный интеллект — в одной платформе. Мы выявляем операционные слабости и превращаем проблемные активы в высокодоходные устойчивые предприятия.</p>
+        <div class="success-model">
+          <h3 data-i18n="success_title">Модель успеха</h3>
+          <p data-i18n-html="success_text">Мы работаем по <strong>модели вознаграждения за результат</strong>: наш доход привязан к ROI и производственным целям вашего проекта. Доверие инвесторов строится на общем результате, а не на фиксированных гонорарах.</p>
+        </div>
+      </div>
+    </section>
 
-        <section class="stats">
-            <strong>50+ hektar</strong> proje yönetimi tecrübesi<br>
-            <strong>%15</strong> enerji tasarrufu başarısı<br>
-            <strong>Enerji & Sürdürülebilirlik Uzmanı</strong>
-        </section>
+    <section id="pillars" class="section pillars-section">
+      <div class="container">
+        <h2 class="section-title" data-i18n="pillars_title">Техническое преимущество</h2>
+        <p class="section-intro" data-i18n="pillars_intro">Три столпа масштабируемых и привлекательных для инвестиций тепличных проектов.</p>
+        <div class="pillars-grid">
+          <article class="pillar-card">
+            <div class="pillar-icon" aria-hidden="true">1</div>
+            <h3 data-i18n="pillar1_title">ИИ-оптимизация</h3>
+            <p data-i18n="pillar1_text">Передовые модели ИИ для климат-контроля, управления ресурсами и максимизации урожая. Снижение энергозатрат на 15% за счёт автономных систем.</p>
+          </article>
+          <article class="pillar-card">
+            <div class="pillar-icon" aria-hidden="true">2</div>
+            <h3 data-i18n="pillar2_title">Гидропоника высокого уровня</h3>
+            <p data-i18n="pillar2_text">Практический опыт в производстве рассады, распространении семян и высокотехнологичных теплицах. Личный аудит большинства гидропонных объектов Казахстана.</p>
+          </article>
+          <article class="pillar-card">
+            <div class="pillar-icon" aria-hidden="true">3</div>
+            <h3 data-i18n="pillar3_title">Стратегическая реабилитация активов</h3>
+            <p data-i18n="pillar3_text">Превращение проблемных активов в высокодоходные предприятия. Управление ROI на основе данных и экспертиза логистики Анталья–Казахстан.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-        <section>
-            <h2>Kazakistan Vizyonum</h2>
-            <p>
-                Kazakistan’ın enerji sektörüne modern, verimli ve yeşil çözümler kazandırmayı hedefliyorum.<br>
-                Yenilenebilir enerji projeleri, büyük ölçekli tesis optimizasyonları ve sürdürülebilir gelişim alanlarında aktif rol alıyorum.<br>
-                Uzun vadede <b>daha temiz, daha ekonomik ve inovatif</b> bir enerji geleceği için çalışıyorum.
-            </p>
-        </section>
+    <section id="technology" class="section technology-section">
+      <div class="container">
+        <h2 class="section-title" data-i18n="tech_title">Цифровая инфраструктура и технологии</h2>
+        <p class="section-intro" data-i18n="tech_intro">Наша техническая база обеспечивает ИИ-автоматизацию и прозрачную масштабируемую работу.</p>
+        <div class="tech-content">
+          <p class="tech-text" data-i18n-html="tech_text">KazakhAgro-Pro построен на современной открытой кодовой базе — <strong>GitHub: <a href="https://github.com/umutcetiner07/Kazakhagro-Pro" target="_blank" rel="noopener noreferrer">umutcetiner07/Kazakhagro-Pro</a></strong>. Репозиторий отражает приверженность технической строгости и видению: автономные ИИ-системы управления для максимизации ROI и минимизации операционных рисков.</p>
+          <div class="tech-badges">
+            <span class="badge" data-i18n="badge_ai">Интеграция ИИ</span>
+            <span class="badge" data-i18n="badge_horticulture">Управление тепличным хозяйством</span>
+            <span class="badge" data-i18n="badge_finance">Проектное финансирование</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <section>
-            <h2>Uzmanlık Alanlarım</h2>
-            <ul>
-                <li>Büyük ölçekli enerji projeleri (50+ hektar)</li>
-                <li>Yenilenebilir enerji sistemleri (güneş, rüzgar, biyokütle)</li>
-                <li>Enerji yönetimi ve verimlilik danışmanlığı</li>
-                <li>Proje optimizasyonu ve sürdürülebilirlik stratejileri</li>
-                <li>Kazakistan ve uluslararası mevzuata uygunluk</li>
-            </ul>
-        </section>
-    </main>
+    <section id="leadership" class="section leadership-section">
+      <div class="container">
+        <h2 class="section-title" data-i18n="leadership_title">Руководство</h2>
+        <div class="leadership-card">
+          <h3 data-i18n="leadership_name">Умут Четинер</h3>
+          <p class="role" data-i18n="leadership_role">Основатель kazakhagro.com | Архитектор агротех-решений | ИИ-управление теплицами и стратегия ROI</p>
+          <ul class="highlights">
+            <li data-i18n-html="leadership_1"><strong>Более 10 лет</strong> в ведущей аграрной экосистеме Антальи: производство рассады, распространение семян, управление теплицами.</li>
+            <li data-i18n-html="leadership_2"><strong>Более 50 га</strong> высокотехнологичных тепличных комплексов в Казахстане (Алматы, Шымкент, Астана).</li>
+            <li data-i18n-html="leadership_3">Уникальная модель управления <strong>«Нулевая ошибка»</strong>: подход на основе данных, применённый к большинству гидропонных объектов Казахстана.</li>
+            <li data-i18n="leadership_4">Вознаграждение за результат — привязка к ROI и производственным целям проекта.</li>
+          </ul>
+          <p class="linkedin-cta"><span data-i18n="linkedin_text">Связаться: </span><a href="https://www.linkedin.com/in/umut-%C3%A7etiner-39a387192" target="_blank" rel="noopener noreferrer" data-i18n="linkedin_link">LinkedIn — Умут Четинер</a></p>
+        </div>
+      </div>
+    </section>
 
-    <footer>
-        LinkedIn: <a href="https://linkedin.com/in/sizinprofiliniz" target="_blank" title="LinkedIn Profilim">linkedin.com/in/sizinprofiliniz</a>
-    </footer>
+    <section id="investment-deck" class="section cta-section">
+      <div class="container">
+        <h2 class="section-title" data-i18n="cta_ready_title">Готовы инвестировать?</h2>
+        <p class="cta-desc" data-i18n="cta_ready_desc">Запросите полный инвест-дек или запишитесь на технический брифинг с нашей командой.</p>
+        <div class="cta-buttons">
+          <a href="mailto:umutcetiner@gmail.com?subject=Investment%20Deck%20Request%20-%20KazakhAgro" class="btn btn-primary" data-i18n="cta_deck">Получить инвест-дек</a>
+          <a href="mailto:umutcetiner@gmail.com?subject=Technical%20Briefing%20-%20KazakhAgro" class="btn btn-secondary" data-i18n="cta_briefing">Записать технический брифинг</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="technical-briefing" class="section cta-section cta-section-alt">
+      <div class="container">
+        <h2 class="section-title" data-i18n="cta_briefing_title">Записать технический брифинг</h2>
+        <p class="cta-desc" data-i18n="cta_briefing_desc">Обсудите ИИ-протоколы, реабилитацию активов и целевой ROI с нашим архитектором решений.</p>
+        <a href="mailto:umutcetiner@gmail.com?subject=Technical%20Briefing%20Request" class="btn btn-primary" data-i18n="contact_us">Связаться с нами</a>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <h2 class="section-title" data-i18n="contact_title">Контакты</h2>
+        <ul class="contact-list">
+          <li><a href="mailto:umutcetiner@gmail.com">umutcetiner@gmail.com</a></li>
+          <li><a href="tel:+905307322081">+90 530 732 20 81</a></li>
+          <li><a href="https://www.linkedin.com/in/umut-%C3%A7etiner-39a387192" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a href="https://github.com/umutcetiner07/Kazakhagro-Pro" target="_blank" rel="noopener noreferrer" data-i18n="github_label">GitHub — Kazakhagro-Pro</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> <span data-i18n="footer_text">KazakhAgro. AI-тепличный комплекс на гидропонике — Казахстан. Все права защищены.</span></p>
+    </div>
+  </footer>
+
+  <script src="translations.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>

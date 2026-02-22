@@ -1,0 +1,26 @@
+/* styles.css içeriği */
+body {
+    background: linear-gradient(135deg, #e0f7fa 0%, #e1bee7 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #262626;
+}
+
+header {
+    background-color: #512da8;
+    color: #fff;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.profile-img {
+    border-radius: 100%;
+    border: 4px solid #fff;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+/* Cursor'ın yazdığı diğer tüm stiller buraya gelecek */
