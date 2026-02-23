@@ -47,6 +47,16 @@ img {
   display: block;
 }
 
+.logo {
+  flex-shrink: 0;
+}
+
+.logo img {
+  height: 52px !important;
+  width: auto !important;
+  display: block;
+}
+
 a {
   color: var(--tech-blue-bright);
   text-decoration: none;
@@ -219,7 +229,7 @@ a:hover {
     flex-direction: column;
   }
 
-  .nav.is-open + .header-cta {
+  .nav.is-open+.header-cta {
     display: none;
   }
 }
