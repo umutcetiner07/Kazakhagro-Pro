@@ -32,6 +32,11 @@
 </head>
 
 <body>
+
+  <!-- ── Custom cursor ─────────────────────────────── -->
+  <div id="cursor-dot" aria-hidden="true"></div>
+  <div id="cursor-ring" aria-hidden="true"></div>
+
   <header class="site-header">
     <div class="container header-inner">
       <a href="/" class="logo" aria-label="KazakhAgro Home">
@@ -39,21 +44,23 @@
       </a>
       <nav class="nav" aria-label="Main navigation">
         <ul>
-          <li><a href="#value" data-i18n="nav_value">Ценность</a></li>
+          <li><a href="#value"      data-i18n="nav_value">Ценность</a></li>
           <li><a href="#technology" data-i18n="nav_technology">Технологии</a></li>
-          <li><a href="#pillars" data-i18n="nav_edge">Преимущества</a></li>
+          <li><a href="#pillars"    data-i18n="nav_edge">Преимущества</a></li>
+          <li><a href="#map"        data-i18n="nav_map">Проекты</a></li>
           <li><a href="#leadership" data-i18n="nav_leadership">Руководство</a></li>
-          <li><a href="#contact" data-i18n="nav_contact">Контакты</a></li>
-          <li class="nav-cta-mobile"><a href="#investment-deck" class="btn btn-primary" data-i18n="cta_deck">Получить
-              инвест-дек</a></li>
+          <li><a href="#contact"    data-i18n="nav_contact">Контакты</a></li>
+          <li class="nav-cta-mobile">
+            <a href="#investment-deck" class="btn btn-primary" data-i18n="cta_deck">Получить инвест-дек</a>
+          </li>
         </ul>
       </nav>
       <div class="header-lang-cta">
         <div class="lang-switcher" role="group" aria-label="Выбор языка">
           <button type="button" class="lang-btn active" data-lang="ru" aria-pressed="true">RU</button>
-          <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
-          <button type="button" class="lang-btn" data-lang="kk" aria-pressed="false">KK</button>
-          <button type="button" class="lang-btn" data-lang="tr" aria-pressed="false">TR</button>
+          <button type="button" class="lang-btn" data-lang="en"  aria-pressed="false">EN</button>
+          <button type="button" class="lang-btn" data-lang="kk"  aria-pressed="false">KK</button>
+          <button type="button" class="lang-btn" data-lang="tr"  aria-pressed="false">TR</button>
         </div>
         <div class="header-cta">
           <a href="#investment-deck" class="btn btn-primary" data-i18n="cta_deck">Получить инвест-дек</a>
@@ -66,28 +73,84 @@
   </header>
 
   <main>
+
+    <!-- ── HERO ──────────────────────────────────────── -->
     <section class="hero">
+      <div class="hero-grid" aria-hidden="true"></div>
       <div class="container">
-        <p class="hero-tag" data-i18n="hero_tag">AI-тепличный комплекс на гидропонике — Казахстан</p>
-        <h1 class="hero-title" data-i18n="hero_title">Опыт Антальи, потенциал Казахстана и ИИ — в одной платформе</h1>
-        <p class="hero-desc" data-i18n-html="hero_desc">Сочетаем более 10 лет опыта в экосистеме Антальи с
+        <p class="hero-tag reveal" data-i18n="hero_tag">AI-тепличный комплекс на гидропонике — Казахстан</p>
+        <h1 class="hero-title reveal" data-i18n="hero_title">Опыт Антальи, потенциал Казахстана и ИИ — в одной платформе</h1>
+        <p class="hero-desc reveal" data-i18n-html="hero_desc">Сочетаем более 10 лет опыта в экосистеме Антальи с
           подтверждённой практикой управления 50+ га в Казахстане и уникальной моделью управления <strong>«Нулевая
             ошибка»</strong> для рентабельной модернизации тепличных активов.</p>
-        <div class="hero-cta">
+        <div class="hero-cta reveal">
           <a href="#investment-deck" class="btn btn-primary" data-i18n="cta_deck">Получить инвест-дек</a>
-          <a href="#technical-briefing" class="btn btn-secondary" data-i18n="cta_briefing">Записать технический
-            брифинг</a>
+          <a href="#technical-briefing" class="btn btn-secondary" data-i18n="cta_briefing">Записать технический брифинг</a>
         </div>
       </div>
     </section>
 
+    <!-- ── TICKER ─────────────────────────────────────── -->
+    <div class="ticker-wrap" aria-hidden="true">
+      <div class="ticker-track" id="ticker-track">
+        <span class="ticker-item hi" data-i18n="tick_ai">ИИ-оптимизация</span><span class="ticker-sep">·</span>
+        <span class="ticker-item"    data-i18n="tick_hydro">Гидропоника</span><span class="ticker-sep">·</span>
+        <span class="ticker-item"><span class="hi">−15%</span> <span data-i18n="tick_energy">энергозатрат</span></span><span class="ticker-sep">·</span>
+        <span class="ticker-item"    data-i18n="tick_cities">Алматы · Шымкент · Астана</span><span class="ticker-sep">·</span>
+        <span class="ticker-item hi" data-i18n="tick_zero">Нулевая ошибка</span><span class="ticker-sep">·</span>
+        <span class="ticker-item"    data-i18n="tick_roi">Вознаграждение за результат</span><span class="ticker-sep">·</span>
+        <span class="ticker-item hi" data-i18n="tick_antalya">Опыт Антальи</span><span class="ticker-sep">·</span>
+        <span class="ticker-item"    data-i18n="tick_years">10+ лет экспертизы</span><span class="ticker-sep">·</span>
+        <!-- duplicate for seamless loop -->
+        <span class="ticker-item hi" data-i18n="tick_ai">ИИ-оптимизация</span><span class="ticker-sep">·</span>
+        <span class="ticker-item"    data-i18n="tick_hydro">Гидропоника</span><span class="ticker-sep">·</span>
+        <span class="ticker-item"><span class="hi">−15%</span> <span data-i18n="tick_energy">энергозатрат</span></span><span class="ticker-sep">·</span>
+        <span class="ticker-item"    data-i18n="tick_cities">Алматы · Шымкент · Астана</span><span class="ticker-sep">·</span>
+        <span class="ticker-item hi" data-i18n="tick_zero">Нулевая ошибка</span><span class="ticker-sep">·</span>
+        <span class="ticker-item"    data-i18n="tick_roi">Вознаграждение за результат</span><span class="ticker-sep">·</span>
+        <span class="ticker-item hi" data-i18n="tick_antalya">Опыт Антальи</span><span class="ticker-sep">·</span>
+        <span class="ticker-item"    data-i18n="tick_years">10+ лет экспертизы</span><span class="ticker-sep">·</span>
+      </div>
+    </div>
+
+    <!-- ── STATS ──────────────────────────────────────── -->
+    <section class="stats-section" aria-label="Ключевые показатели">
+      <div class="container stats-grid">
+        <div class="stat-cell reveal">
+          <div class="stat-number">
+            <span class="count" data-target="50">0</span><span class="stat-suffix">+</span>
+          </div>
+          <div class="stat-label" data-i18n="stat_ha">га в Казахстане</div>
+        </div>
+        <div class="stat-cell reveal">
+          <div class="stat-number">
+            <span class="count" data-target="10">0</span><span class="stat-suffix">+</span>
+          </div>
+          <div class="stat-label" data-i18n="stat_years">лет опыта в Анталье</div>
+        </div>
+        <div class="stat-cell reveal">
+          <div class="stat-number">
+            <span class="count" data-target="15">0</span><span class="stat-suffix">%</span>
+          </div>
+          <div class="stat-label" data-i18n="stat_energy">снижение энергозатрат</div>
+        </div>
+        <div class="stat-cell reveal">
+          <div class="stat-number">
+            <span class="count" data-target="3">0</span><span class="stat-suffix">×</span>
+          </div>
+          <div class="stat-label" data-i18n="stat_cities">города активных проектов</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── VALUE ──────────────────────────────────────── -->
     <section id="value" class="section value-section">
       <div class="container">
-        <h2 class="section-title" data-i18n="value_title">Ценностное предложение</h2>
-        <p class="value-statement" data-i18n="value_statement">Сельскохозяйственный опыт Антальи, потенциал Казахстана и
+        <h2 class="section-title reveal" data-i18n="value_title">Ценностное предложение</h2>
+        <p class="value-statement reveal" data-i18n="value_statement">Сельскохозяйственный опыт Антальи, потенциал Казахстана и
           искусственный интеллект — в одной платформе. Мы выявляем операционные слабости и превращаем проблемные активы
           в высокодоходные устойчивые предприятия.</p>
-        <div class="success-model">
+        <div class="success-model reveal">
           <h3 data-i18n="success_title">Модель успеха</h3>
           <p data-i18n-html="success_text">Мы работаем по <strong>модели вознаграждения за результат</strong>: наш доход
             привязан к ROI и производственным целям вашего проекта. Доверие инвесторов строится на общем результате, а
@@ -96,25 +159,26 @@
       </div>
     </section>
 
+    <!-- ── PILLARS ─────────────────────────────────────── -->
     <section id="pillars" class="section pillars-section">
       <div class="container">
-        <h2 class="section-title" data-i18n="pillars_title">Техническое преимущество</h2>
-        <p class="section-intro" data-i18n="pillars_intro">Три столпа масштабируемых и привлекательных для инвестиций
+        <h2 class="section-title reveal" data-i18n="pillars_title">Техническое преимущество</h2>
+        <p class="section-intro reveal" data-i18n="pillars_intro">Три столпа масштабируемых и привлекательных для инвестиций
           тепличных проектов.</p>
         <div class="pillars-grid">
-          <article class="pillar-card">
+          <article class="pillar-card reveal">
             <div class="pillar-icon" aria-hidden="true">1</div>
             <h3 data-i18n="pillar1_title">ИИ-оптимизация</h3>
             <p data-i18n="pillar1_text">Передовые модели ИИ для климат-контроля, управления ресурсами и максимизации
               урожая. Снижение энергозатрат на 15% за счёт автономных систем.</p>
           </article>
-          <article class="pillar-card">
+          <article class="pillar-card reveal">
             <div class="pillar-icon" aria-hidden="true">2</div>
             <h3 data-i18n="pillar2_title">Гидропоника высокого уровня</h3>
             <p data-i18n="pillar2_text">Практический опыт в производстве рассады, распространении семян и
               высокотехнологичных теплицах. Личный аудит большинства гидропонных объектов Казахстана.</p>
           </article>
-          <article class="pillar-card">
+          <article class="pillar-card reveal">
             <div class="pillar-icon" aria-hidden="true">3</div>
             <h3 data-i18n="pillar3_title">Стратегическая реабилитация активов</h3>
             <p data-i18n="pillar3_text">Превращение проблемных активов в высокодоходные предприятия. Управление ROI на
@@ -124,12 +188,13 @@
       </div>
     </section>
 
+    <!-- ── TECHNOLOGY ─────────────────────────────────── -->
     <section id="technology" class="section technology-section">
       <div class="container">
-        <h2 class="section-title" data-i18n="tech_title">Цифровая инфраструктура и технологии</h2>
-        <p class="section-intro" data-i18n="tech_intro">Наша техническая база обеспечивает ИИ-автоматизацию и прозрачную
+        <h2 class="section-title reveal" data-i18n="tech_title">Цифровая инфраструктура и технологии</h2>
+        <p class="section-intro reveal" data-i18n="tech_intro">Наша техническая база обеспечивает ИИ-автоматизацию и прозрачную
           масштабируемую работу.</p>
-        <div class="tech-content">
+        <div class="tech-content reveal">
           <p class="tech-text" data-i18n-html="tech_text">KazakhAgro-Pro построен на современной открытой кодовой базе —
             <strong>GitHub: <a href="https://github.com/umutcetiner07/Kazakhagro-Pro" target="_blank"
                 rel="noopener noreferrer">umutcetiner07/Kazakhagro-Pro</a></strong>. Репозиторий отражает приверженность
@@ -145,10 +210,97 @@
       </div>
     </section>
 
+    <!-- ── MAP ────────────────────────────────────────── -->
+    <section id="map" class="section map-section">
+      <div class="container">
+        <h2 class="section-title reveal" data-i18n="map_title">Активные проекты</h2>
+        <p class="section-intro reveal" data-i18n="map_intro">Три города Казахстана — три действующих объекта под управлением KazakhAgro.</p>
+        <div class="map-layout reveal">
+          <div class="map-visual" aria-label="Карта проектов Казахстан">
+            <svg viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kazakhstan project map">
+              <defs>
+                <radialGradient id="mapbg" cx="50%" cy="50%" r="60%">
+                  <stop offset="0%" stop-color="#1a4d38"/>
+                  <stop offset="100%" stop-color="#0d3b2c"/>
+                </radialGradient>
+                <filter id="glow-filter">
+                  <feGaussianBlur stdDeviation="3" result="blur"/>
+                  <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+              </defs>
+              <rect width="900" height="480" fill="url(#mapbg)" rx="12"/>
+              <!-- subtle grid -->
+              <line x1="0" y1="160" x2="900" y2="160" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+              <line x1="0" y1="320" x2="900" y2="320" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+              <line x1="300" y1="0" x2="300" y2="480" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+              <line x1="600" y1="0" x2="600" y2="480" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+              <!-- Kazakhstan outline (simplified) -->
+              <path d="M110,170 L155,105 L225,88 L310,78 L400,72 L490,70 L570,78 L645,92 L710,108 L760,132 L790,165 L800,205 L788,248 L758,288 L722,322 L682,348 L638,362 L592,372 L548,382 L504,392 L460,400 L416,394 L372,376 L328,354 L284,330 L240,304 L196,272 L158,238 L132,204 Z"
+                fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+              <!-- connecting dashed lines -->
+              <line x1="628" y1="352" x2="524" y2="382" stroke="rgba(42,122,184,0.3)" stroke-width="1" stroke-dasharray="5,4"/>
+              <line x1="524" y1="382" x2="464" y2="172" stroke="rgba(42,122,184,0.3)" stroke-width="1" stroke-dasharray="5,4"/>
+              <line x1="628" y1="352" x2="464" y2="172" stroke="rgba(42,122,184,0.15)" stroke-width="1" stroke-dasharray="5,4"/>
+              <!-- ALMATY -->
+              <g class="map-pin" data-city="almaty" style="cursor:pointer">
+                <circle cx="628" cy="352" r="18" fill="rgba(42,122,184,0.15)"/>
+                <circle cx="628" cy="352" r="9" fill="#2a7ab8" filter="url(#glow-filter)"/>
+                <circle cx="628" cy="352" r="4" fill="#fff"/>
+                <text x="628" y="332" text-anchor="middle" fill="#eef1f3" font-family="Outfit,sans-serif" font-size="12" font-weight="600" letter-spacing="0.05em" data-i18n="city_almaty">АЛМАТЫ</text>
+              </g>
+              <!-- SHYMKENT -->
+              <g class="map-pin" data-city="shymkent" style="cursor:pointer">
+                <circle cx="524" cy="382" r="15" fill="rgba(42,122,184,0.12)"/>
+                <circle cx="524" cy="382" r="7" fill="#2a7ab8" filter="url(#glow-filter)"/>
+                <circle cx="524" cy="382" r="3" fill="#fff"/>
+                <text x="524" y="362" text-anchor="middle" fill="#eef1f3" font-family="Outfit,sans-serif" font-size="11" font-weight="600" letter-spacing="0.05em" data-i18n="city_shymkent">ШЫМКЕНТ</text>
+              </g>
+              <!-- ASTANA -->
+              <g class="map-pin" data-city="astana" style="cursor:pointer">
+                <circle cx="464" cy="172" r="18" fill="rgba(212,168,67,0.18)"/>
+                <circle cx="464" cy="172" r="9" fill="#d4a843" filter="url(#glow-filter)"/>
+                <circle cx="464" cy="172" r="4" fill="#fff"/>
+                <text x="464" y="152" text-anchor="middle" fill="#eef1f3" font-family="Outfit,sans-serif" font-size="12" font-weight="600" letter-spacing="0.05em" data-i18n="city_astana">АСТАНА</text>
+              </g>
+            </svg>
+            <!-- tooltip -->
+            <div class="map-tooltip" id="map-tooltip" aria-live="polite"></div>
+          </div>
+          <div class="map-cities">
+            <div class="map-city-card" data-city="almaty">
+              <div class="map-city-header">
+                <span class="map-city-dot blue"></span>
+                <strong data-i18n="city_almaty_name">Алматы</strong>
+              </div>
+              <p data-i18n="city_almaty_desc">Флагманский объект. Высокотехнологичный гидропонный комплекс с полной ИИ-интеграцией.</p>
+              <span class="badge" data-i18n="city_almaty_tag">Флагманский объект</span>
+            </div>
+            <div class="map-city-card" data-city="shymkent">
+              <div class="map-city-header">
+                <span class="map-city-dot blue"></span>
+                <strong data-i18n="city_shymkent_name">Шымкент</strong>
+              </div>
+              <p data-i18n="city_shymkent_desc">Реабилитированный тепличный актив. Применена модель «Нулевая ошибка».</p>
+              <span class="badge" data-i18n="city_shymkent_tag">Реабилитация активов</span>
+            </div>
+            <div class="map-city-card" data-city="astana">
+              <div class="map-city-header">
+                <span class="map-city-dot gold"></span>
+                <strong data-i18n="city_astana_name">Астана</strong>
+              </div>
+              <p data-i18n="city_astana_desc">Столичный проект. Стратегическое партнёрство и расширение инфраструктуры.</p>
+              <span class="badge badge-gold" data-i18n="city_astana_tag">Стратегический партнёр</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── LEADERSHIP ─────────────────────────────────── -->
     <section id="leadership" class="section leadership-section">
       <div class="container">
-        <h2 class="section-title" data-i18n="leadership_title">Руководство</h2>
-        <div class="leadership-card">
+        <h2 class="section-title reveal" data-i18n="leadership_title">Руководство</h2>
+        <div class="leadership-card reveal">
           <h3 data-i18n="leadership_name">Умут Четинер</h3>
           <p class="role" data-i18n="leadership_role">Основатель kazakhagro.com | Архитектор агротех-решений |
             ИИ-управление теплицами и стратегия ROI</p>
@@ -159,8 +311,7 @@
               Казахстане (Алматы, Шымкент, Астана).</li>
             <li data-i18n-html="leadership_3">Уникальная модель управления <strong>«Нулевая ошибка»</strong>: подход на
               основе данных, применённый к большинству гидропонных объектов Казахстана.</li>
-            <li data-i18n="leadership_4">Вознаграждение за результат — привязка к ROI и производственным целям проекта.
-            </li>
+            <li data-i18n="leadership_4">Вознаграждение за результат — привязка к ROI и производственным целям проекта.</li>
           </ul>
           <p class="linkedin-cta"><span data-i18n="linkedin_text">Связаться: </span><a
               href="https://www.linkedin.com/in/umut-%C3%A7etiner-39a387192" target="_blank" rel="noopener noreferrer"
@@ -169,12 +320,13 @@
       </div>
     </section>
 
+    <!-- ── INVESTMENT DECK CTA ────────────────────────── -->
     <section id="investment-deck" class="section cta-section">
       <div class="container">
-        <h2 class="section-title" data-i18n="cta_ready_title">Готовы инвестировать?</h2>
-        <p class="cta-desc" data-i18n="cta_ready_desc">Запросите полный инвест-дек или запишитесь на технический брифинг
+        <h2 class="section-title reveal" data-i18n="cta_ready_title">Готовы инвестировать?</h2>
+        <p class="cta-desc reveal" data-i18n="cta_ready_desc">Запросите полный инвест-дек или запишитесь на технический брифинг
           с нашей командой.</p>
-        <div class="cta-buttons">
+        <div class="cta-buttons reveal">
           <a href="mailto:umutcetiner@gmail.com?subject=Investment%20Deck%20Request%20-%20KazakhAgro"
             class="btn btn-primary" data-i18n="cta_deck">Получить инвест-дек</a>
           <a href="mailto:umutcetiner@gmail.com?subject=Technical%20Briefing%20-%20KazakhAgro" class="btn btn-secondary"
@@ -183,29 +335,79 @@
       </div>
     </section>
 
+    <!-- ── LEAD FORM ──────────────────────────────────── -->
+    <section id="lead-form" class="section lead-form-section">
+      <div class="container">
+        <h2 class="section-title reveal" data-i18n="form_title">Запросить инвестиционные материалы</h2>
+        <p class="section-intro reveal" data-i18n="form_intro">Заполните форму — мы свяжемся с вами в течение 24 часов.</p>
+        <div class="lead-form reveal" id="lead-form-wrap">
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label" for="f-name" data-i18n="form_name_label">Имя *</label>
+              <input class="form-input" id="f-name" type="text" data-i18n-placeholder="form_name_ph" placeholder="Иван Иванов">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="f-company" data-i18n="form_company_label">Компания</label>
+              <input class="form-input" id="f-company" type="text" data-i18n-placeholder="form_company_ph" placeholder="KazInvest LLC">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="f-email" data-i18n="form_email_label">Email *</label>
+              <input class="form-input" id="f-email" type="email" data-i18n-placeholder="form_email_ph" placeholder="ivan@company.com">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="f-phone" data-i18n="form_phone_label">Телефон</label>
+              <input class="form-input" id="f-phone" type="tel" placeholder="+7 700 000 00 00">
+            </div>
+            <div class="form-group form-full">
+              <label class="form-label" for="f-type" data-i18n="form_type_label">Тип запроса</label>
+              <select class="form-input" id="f-type">
+                <option value="deck"     data-i18n="form_opt_deck">Инвест-дек</option>
+                <option value="briefing" data-i18n="form_opt_briefing">Технический брифинг</option>
+                <option value="partner"  data-i18n="form_opt_partner">Партнёрство</option>
+                <option value="other"    data-i18n="form_opt_other">Другое</option>
+              </select>
+            </div>
+            <div class="form-group form-full">
+              <label class="form-label" for="f-msg" data-i18n="form_msg_label">Сообщение</label>
+              <textarea class="form-input" id="f-msg" rows="3" data-i18n-placeholder="form_msg_ph" placeholder="Ваш вопрос или комментарий..."></textarea>
+            </div>
+          </div>
+          <button type="button" class="btn btn-primary form-submit" id="form-submit" data-i18n="form_submit">Отправить запрос →</button>
+          <p class="form-note" data-i18n="form_note">Мы не передаём ваши данные третьим лицам.</p>
+        </div>
+        <div class="form-success" id="form-success" style="display:none">
+          <div class="form-success-icon">✓</div>
+          <h3 data-i18n="form_success_title">Запрос получен!</h3>
+          <p data-i18n="form_success_body">Мы свяжемся с вами в течение 24 часов. Спасибо за интерес к KazakhAgro.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── TECHNICAL BRIEFING ─────────────────────────── -->
     <section id="technical-briefing" class="section cta-section cta-section-alt">
       <div class="container">
-        <h2 class="section-title" data-i18n="cta_briefing_title">Записать технический брифинг</h2>
-        <p class="cta-desc" data-i18n="cta_briefing_desc">Обсудите ИИ-протоколы, реабилитацию активов и целевой ROI с
+        <h2 class="section-title reveal" data-i18n="cta_briefing_title">Записать технический брифинг</h2>
+        <p class="cta-desc reveal" data-i18n="cta_briefing_desc">Обсудите ИИ-протоколы, реабилитацию активов и целевой ROI с
           нашим архитектором решений.</p>
-        <a href="mailto:umutcetiner@gmail.com?subject=Technical%20Briefing%20Request" class="btn btn-primary"
+        <a href="mailto:umutcetiner@gmail.com?subject=Technical%20Briefing%20Request" class="btn btn-primary reveal"
           data-i18n="contact_us">Связаться с нами</a>
       </div>
     </section>
 
+    <!-- ── CONTACT ─────────────────────────────────────── -->
     <section id="contact" class="section contact-section">
       <div class="container">
-        <h2 class="section-title" data-i18n="contact_title">Контакты</h2>
+        <h2 class="section-title reveal" data-i18n="contact_title">Контакты</h2>
         <ul class="contact-list">
           <li><a href="mailto:umutcetiner@gmail.com">umutcetiner@gmail.com</a></li>
           <li><a href="tel:+905307322081">+90 530 732 20 81</a></li>
-          <li><a href="https://www.linkedin.com/in/umut-%C3%A7etiner-39a387192" target="_blank"
-              rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a href="https://www.linkedin.com/in/umut-%C3%A7etiner-39a387192" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
           <li><a href="https://github.com/umutcetiner07/Kazakhagro-Pro" target="_blank" rel="noopener noreferrer"
               data-i18n="github_label">GitHub — Kazakhagro-Pro</a></li>
         </ul>
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer">
